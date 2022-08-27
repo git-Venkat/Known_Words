@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Known Words</title>
+  <link rel="stylesheet" href="css\master.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+
+<body onscroll="fixTextCursor()">
+  
+  <div class = 'popupCss hide' >
+    
+    <span class="headWpm">WPM</span>
+    <span class="grossWpm" style="transition: .25s;">00</span>
+    <span class="headAccuracy" style="transition: .25s;">Accuracy</span>
+    <span class="accuracyValue">00%</span>  
+    <span class="headChar">Characters</span>
+    <span class="wpmInsertChar charTyped">52</span>
+    <span class="headTime">Time</span>
+    <span class="wpmInsertTime finalTime">00 sec</span>
+    <span class="lastWords">ENTER For Close</span>
+ 
+
+    <!-- <span class="wpm popupText">wpm : </span>
+    <span class="wpmValue popupText grossWpm">00</span>
+    <span class="popupText">accuracy : </span>
+    <span class="wpmValue popupText accuracyValue">00</span>
+    <span class="popupText">characters : </span>
+    <span class="wpmValue popupText charTyped">00</span>
+    <span class="popupText">time : </span>
+    <span class="wpmValue popupText finalTime">00</span>
+    <span class="popupText" style="margin-top:45px; color:#c1c13b; margin-left: 10px;">Press Enter to close</span>
+    <div class="pressEnter">
+      <span class="enterText">Enter</span>
+    </div> -->
+
+  </div>
+  
+  <div class="contentCarrier">
+    
+    <!-- Left status box -->
+    <div class="leftStat">
+      <div class="timer_btn">
+        <span class="timertext">Timer</span>
+        <img src="source\arrow_back_ios_FILL0_wght400_GRAD0_opsz48_left.png" class="leftBtn btn">
+        <img src="source\arrow_back_ios_FILL0_wght400_GRAD0_opsz48_right.png" class="rightBtn btn">
+        <div class = 'timer'>
+          <span class="seconds">30</span>
+          <div class="timeReset">
+            <span class="timeReset_text">Reset</span>
+          </div>
+        </div>
+      </div>
+      <!-- <input type="text" placeholder="In seconds" Id="timerInput"> -->
+    </div>
+
+    <!-- right status box -->
+    <div class="rightStat">
+      <div class="onTypeText">
+        <div class="hoverOpacity">
+          <span class="esc">Press ESC to Retry</span>
+          <div class="escKey" style="cursor: pointer;">
+            <span class="escKeyText">Esc</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- typing area -->
+    <div class="typingArea">
+
+      <div class="textCursor flashAnimation"></div>
+
+        <!-- add the words -->
+
+
+    </div>
+
+    <!-- keyboard illustration -->
+    <div class="keyboard">
+
+      <!-- upper row keys -->
+      <div class="upperRow">
+
+        <div class="q key keyDefault">
+          <h1 class="letters">Q</h1>
+        </div>
+        <div class="w key keyDefault">
+          <h1 class="letters">W</h1>
+        </div>
+        <div class="e key keyDefault">
+          <h1 class="letters">E</h1>
+        </div>
+        <div class="r key keyDefault">
+          <h1 class="letters">R</h1>
+        </div>
+        <div class="t key keyDefault ">
+          <h1 class="letters">T</h1>
+        </div>
+        <div class="y key keyDefault">
+          <h1 class="letters">Y</h1>
+        </div>
+        <div class="u key keyDefault">
+          <h1 class="letters">U</h1>
+        </div>
+        <div class="i key keyDefault">
+          <h1 class="letters">I</h1>
+        </div>
+        <div class="o key keyDefault">
+          <h1 class="letters">O</h1>
+        </div>
+        <div class="p key keyDefault">
+          <h1 class="letters">P</h1>
+        </div>
+
+      </div>
+
+      <!-- middle row keys -->
+      <div class="middleRow">
+
+        <div class="a key keyDefault">
+          <h1 class="letters">A</h1>
+        </div>
+        <div class="s key keyDefault">
+          <h1 class="letters">S</h1>
+        </div>
+        <div class="d key keyDefault">
+          <h1 class="letters">D</h1>
+        </div>
+        <div class="f key keyDefault">
+          <h1 class="letters">F</h1>
+        </div>
+        <div class="g key keyDefault">
+          <h1 class="letters">G</h1>
+        </div>
+        <div class="h key keyDefault">
+          <h1 class="letters">H</h1>
+        </div>
+        <div class="j key keyDefault">
+          <h1 class="letters">J</h1>
+        </div>
+        <div class="k key keyDefault">
+          <h1 class="letters">K</h1>
+        </div>
+        <div class="l key keyDefault">
+          <h1 class="letters">L</h1>
+        </div>
+
+      </div>
+
+      <!-- lower row keys -->
+      <div class="lowerRow ">
+
+          <div class="z key keyDefault">
+            <h1 class="letters">Z</h1>
+          </div>
+          <div class="x key keyDefault">
+            <h1 class="letters">X</h1>
+          </div>
+          <div class="c key keyDefault">
+            <h1 class="letters">C</h1>
+          </div>
+          <div class="v key keyDefault">
+            <h1 class="letters">V</h1>
+          </div>
+          <div class="b key keyDefault">
+            <h1 class="letters">B</h1>
+          </div>
+          <div class="n key keyDefault">
+            <h1 class="letters">N</h1>
+          </div>
+          <div class="m key keyDefault">
+            <h1 class="letters">M</h1>
+          </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  
+  <script src="js\script.js"></script>
+</body>
+
+</html>

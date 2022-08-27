@@ -1,0 +1,486 @@
+body{
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Main div */
+.contentCarrier{
+  margin: auto;
+  max-width: 1350px;
+  min-width: 1300px;
+  padding-top: 10px;
+}
+
+.blur{
+  filter: blur(20px);
+  transition: .125s;
+}
+
+/* WPM popup*/
+.popupCss{
+  background-color: transparent;
+  box-shadow: 2px 2px 20px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  width: 0;
+  height: 650px;
+  border: 5px;
+  border-radius: 15px;
+  transition: .25s;
+}
+
+.popupContainer{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 10;
+  width: 450px;
+  height: 600px;
+  border-radius: 8px;
+  transition: .125s;
+}
+
+.headWpm{
+  display: flex;
+  position: fixed;
+  top: 15%;
+  left: 30%;
+  transform: translate(-50%);
+  margin-top: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 165px;
+  font-weight: bold;
+  color: #d1d1d1;
+}
+
+.grossWpm{
+  display: flex;
+  position: fixed;
+  top: 42%;
+  left: 21%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 190px;
+  font-weight: 500;
+  color: #c1c13b;
+}
+
+.headAccuracy{
+  display: flex;
+  position: fixed;
+  top: 53px;
+  left: 77%;
+  transform: translate(-50%);
+  margin-top: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  color: #d1d1d1;
+}
+
+.accuracyValue{
+  display: flex;
+  position: fixed;
+  top: 23%;
+  left: 75%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: #c1c13b;
+}
+
+.headTime{
+  display: flex;
+  position: fixed;
+  top: 56%;
+  left: 79%;
+  transform: translate(-50%);
+  margin-top: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  color: #d1d1d1;
+}
+
+.wpmInsertTime{
+  display: flex;
+  position: fixed;
+  top: 69%;
+  left: 72%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: #c1c13b;
+}
+
+.headChar{
+  display: flex;
+  position: fixed;
+  top: 34%;
+  left: 78%;
+  transform: translate(-50%);
+  margin-top: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  color: #d1d1d1;
+}
+
+.wpmInsertChar{
+  display: flex;
+  position: fixed;
+  top: 46%;
+  left: 76%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px;
+  font-weight: 400;
+  color: #c1c13b;
+}
+
+.lastWords{
+  display: flex;
+  position: fixed;
+  top: 90%;
+  left: 45%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #c1c13b;
+}
+
+
+
+
+/* Left Status box */
+.leftStat{
+  display: block;
+  width: 210px;
+  height: 300px;
+  background-color: transparent;
+  padding: 0;
+  margin-right: 10px;
+  position: relative;
+  float : left;
+}
+
+.btn{
+  margin-top: 30px;
+  width: 15px;
+  height: 15px;
+  opacity: 50%;
+  transition: 0.15s;
+}
+
+/* Time Reset */
+.timeReset{
+  display: flex;
+  margin: auto;
+  margin-top: 10px;
+  width: 70px;
+  height: 30px;
+  border-radius: 3px;
+  background-color: #33373e;
+  transition: 0.15s;
+  cursor: pointer;
+}
+
+.timeReset_text{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: #c1c13b;
+  margin: auto;
+}
+
+.timeReset:hover{
+  width: 75px;
+  height: 35px;
+}
+
+/* Button */
+.btn{
+  position: absolute;
+  top: 105px;
+}
+
+.leftBtn{
+  position: absolute;
+  left: 45px;
+  transition: .125s;
+}
+
+.rightBtn{
+  position: absolute;
+  right: 45px;
+  transition: .125s;
+}
+
+.btn:hover{
+  margin-top: 25px;
+  width: 25px;
+  height: 25px;
+  opacity: 100%;
+  cursor: pointer;
+}
+
+.timer_btn{
+  margin-top: 50px;
+}
+
+#timerInput{
+  margin-left: 50px;
+  margin-top: 15px;
+  width: 100px;
+  height: 25px;
+  border: 2px solid;
+  border-color: #646669;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  color: #c1c13b;
+  background: none;
+  text-align: center;
+  transition: 0.2s;
+}
+
+#timerInput:focus{
+  border:0;
+  border-color: none;
+}
+
+::placeholder{
+  color: #c1c13b;
+  font-size: 17px;
+}
+/* Timer */
+.timer{
+  text-align: center;
+}
+
+.seconds{
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  color: rgb(232, 232, 232);
+  font-size: 60px;
+  font-family: roboto, OCR A Extended , MS Reference Sans Serif;
+}
+
+.timertext{
+  display: inline-block;
+  margin-top : 20px;
+  margin-left: 70px;
+  margin-bottom:5px ;
+  font-size: 27px;
+  font-family: 'Roboto', sans-serif;
+  color: #c1c13b;
+}
+
+/* Right status box */
+.rightStat{
+  display: inline-block;
+  width: 180px;
+  height: 270px;
+  background-color: transparent;
+  border-radius: 5px;
+  position: relative;
+  float: right;
+}
+
+.onTypeText{
+  margin-top: 100px;
+  text-align: center;
+  opacity: 0;
+  transition: .25s;
+}
+
+.hoverOpacity{
+  opacity: .5;
+  transition: .25s;
+}
+
+.hoverOpacity:hover{
+  opacity: 1;
+}
+
+/* ESC */
+.esc{
+  position: flex;
+  flex-wrap: wrap;
+  font-family: 'Roboto', sans-serif;
+  font-size: large;
+  font-weight: 400;
+  color: #bdbdbd;
+}
+
+.escKey{
+  margin: auto;
+  margin-top: 10px;
+  width: 60px;
+  height: 50px;
+  border: 3px solid;
+  border-color: #646464;
+  border-radius: 5px;
+}
+
+.escKey:hover{
+  background-color: #c1c13b ; 
+  border-color: transparent;
+}
+
+.escKeyText{
+  position: relative;
+  float: left;
+  font-family: 'Roboto', sans-serif;
+  color: #c1c13b;
+  padding: 3px;
+}
+
+/* CTRL Flow */
+.ctrlFlow{
+  max-height: 600px;
+  min-height: 60px;
+  width: 100%;
+}
+
+/* Typing Area */
+.typingArea{
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 100px;
+  max-width: 900px;
+  max-height: 180px;
+  position: relative;
+}
+
+/* Text Cursor */
+.textCursor{
+  width: 3.5px;
+  height: 38px;
+  background-color: #A2B5BB;
+  border-radius: 1px;
+  display: flex;
+  position:fixed ;
+  left: 4px;
+  top: 5px;
+  transition: left .13s;
+}
+
+.flashAnimation{
+  animation: fade 1.5s infinite;
+}
+
+@keyframes fade{
+  0% {opacity: 0}
+  50% {opacity: 1}
+  100% {opacity: 0}
+}
+
+/* Keyboard */
+.keyboard{
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Keys */
+.key{
+  display: inline-block;
+  width: 90px;
+  height: 80px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+/* Keys that are Not Clicked */
+.keyDefault{
+  opacity: 70%;
+  border: 3px solid;
+  border-color: #646464;
+  background-color: transparent;
+  transition: .1s;
+}
+
+.key:hover{
+  background-color: #ecec4a ; 
+  opacity: .8;
+  border-color: transparent;
+}
+
+/* Keys that are Clicked */
+.keyClicked{
+  opacity: 100%;
+  background-color: rgb(232, 232, 232);
+  font-size: 25px;
+  border-color: transparent;
+  transition: .125s;
+}
+
+/* Upper Row keys */
+.upperRow{
+  margin-top: 10px;
+}
+
+/* Space key */
+.space{
+  margin: auto;
+  margin-top: 10px;
+  width: 500px;
+  height: 80px;
+  border-radius: 5px;
+  background-color: rgb(232, 232, 232);
+}
+
+/* for Hide lower Row */
+.hide{
+  visibility: hidden;
+}
+
+/* Key Letters */
+.letters{
+  font-family: roboto, OCR A Extended , MS Reference Sans Serif;
+  font-weight: normal;
+  color: #ecec4a;
+}
+
+.let{
+
+  font-family: sans-serif;
+  font-size: 30px;
+  color: rgb(232, 232, 232);
+
+}
+
+/* Final Sentences */
+.typingLetters{
+  color: #646669;
+  font-weight: lighter;
+}
+
+/* Wrong Letters */
+.wrong{
+  color: #ca4754;
+  animation: fade 1s infinite;
+}
+/* Correct Letters */
+.correct{
+  color:#d1d0c5;
+}
+
+/* Words */
+.word{
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin-left: 10px;
+    font-size: 28px;
+    font-family: 'roboto', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+  
